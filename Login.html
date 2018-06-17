@@ -1,0 +1,64 @@
+ <script type="text/javascript" src="js/materialize.min.js"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+ <link rel="stylesheet" type="text/css" href="../css/login.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper #b71c1c red darken-4">
+      <a href="#" class="brand-logo">Carnicerias Ex San Martin</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="Locales.html">Locales</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+         <li><a href="Recetas.html">Recetas</a></li>
+          <li><a href="Trabaja.html">Trabaja con nosotros</a></li>
+           <li><a href="Login.html">Iniciar Sesion</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class="Login">
+    <div class="row">
+    <div class="col s12 m4 offset-m4">
+        <div class="card">
+           <div class="card-action teal lighten-1 white-text">
+               <h3>Iniciar Sesion</h3>
+           </div>
+
+           <div class="card-content">
+
+            <form action="php/Login.php" method="post" id="Login">
+        <div class="row">
+        <div class="input-field validate">
+          <input type="email" id="mail" class="validate" name="mail" required>
+          <label for="mail">Correo</label>
+        </div>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" name="password" required>
+          <label for="password">Contraseña</label>
+        </div>
+      <span class="helper-text" data-error="wrong" data-success="right"></span>
+            <button class="btn-large waves-effect waves-dark">Iniciar Sesion</button>
+      </form>
+            <a href="Registrar.html">Crear Cuenta</a>            
+            </div>
+           
+           </div>
+        </div>
+    </div>
+</div>
+</div>
+  </main>
+
+</body>
+</html>
