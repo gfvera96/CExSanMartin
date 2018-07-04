@@ -6,7 +6,7 @@ $correo = $_POST['mail'];
 $pass = $_POST['password'];
 $perfil= "cliente";
 
-$conexion=mysqli_connect("localhost","root","","Carniceria");
+$conexion=mysqli_connect("localhost","root","","carniceriasprint1");
 $consulta = "INSERT into  usuario values('$nombre','$apellido','$correo','$pass','$perfil')";
 $resultado = mysqli_query($conexion,$consulta);
 $filas= mysqli_num_rows($resultado);

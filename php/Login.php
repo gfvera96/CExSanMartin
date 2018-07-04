@@ -4,7 +4,7 @@ $correo = $_POST['mail'];
 $pass = $_POST['password'];
 $con = mysql_connect('localhost', 'root', '')  or die('No se pudo conectar: ' . mysql_error());
 //echo 'Connected successfully';
-mysql_select_db('Carniceria') or die('No se pudo seleccionar la base de datos');
+mysql_select_db('Carniceriasprint1') or die('No se pudo seleccionar la base de datos');
 mysql_set_charset('utf8');
 
 $sql="SELECT * FROM `usuario` WHERE `correo`='$correo' and `password`='$pass'"; // realizo la comparación con la base de datos
