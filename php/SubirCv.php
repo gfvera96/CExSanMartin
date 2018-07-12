@@ -24,7 +24,7 @@ if($key = array_search($_FILES['uploaded']['type'],$listtype))
 {
 echo '<script language="javascript">alert("Enviado correctamente");</script>';
             echo "<script language='JavaScript'>";
-            echo "location = '../Trabaja.html'";
+            echo "location = '../view/Trabaja.html'";
             echo "</script>"; 
             
 
@@ -41,7 +41,7 @@ else
 {
 	echo '<script language="javascript">alert("El Curriculum debe tener formato word o  pdf");</script>';
             echo "<script language='JavaScript'>";
-            echo "location = '../Trabaja.html'";
+            echo "location = '../view/Trabaja.html'";
             echo "</script>"; 
 
 }

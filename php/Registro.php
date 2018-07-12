@@ -1,40 +1,48 @@
 <?php
-session_start();
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $correo = $_POST['mail'];
 $pass = $_POST['password'];
 $perfil= "cliente";
 
-$conexion=mysqli_connect("localhost","root","","carniceriasprint1");
-$consulta = "INSERT into  usuario values('$nombre','$apellido','$correo','$pass','$perfil')";
-$resultado = mysqli_query($conexion,$consulta);
-$filas= mysqli_num_rows($resultado);
+$server = "localhost";
+$user = "root";
+$pass= "";
+$bd = "Carniceriasprint1";
 
-if($filas > 0)
+$con = mysqli_connect($server, $user, $pass, $bd);
+
+if(!$con)
 {
-	echo '<script language="javascript">alert("Error al registrar");</script>';
-			echo "<script language='JavaScript'>";
-           	echo "location = '../Registrar.html'";
-            echo "</script>"; 
+	die("Error al conectar:" .mysqli_connect_error());
 }
 
-else{
-	echo '<script language="javascript">alert("Registrado Correctamente");</script>';
-			echo "<script language='JavaScript'>";
-           	echo "location = '../Login.html'";
-            echo "</script>"; 
+$query = "insert into usuario values('".$nombre."','".$apellido."','".$correo."','".$pass."','".$perfil."')";
 
-	
-	#echo '<script type="text/javascript">alert("Datos incorrectos");</script>';
-	
-	
-	#header('location: ../index.html#Login');
-	
-
-
+if(mysqli_query($con, $query))
+{
+    echo '<script language="javascript">alert("Registrado Correctamente");</script>';
+	echo "<script language='JavaScript'>";
+    echo "location = '../view/Login.html'";
+    echo "</script>";
 }
-mysqli_free_result($resultado);
-mysqli_close($conexion);
+else
+{
+   echo '<script language="javascript">alert("Este usuario ya se encuentra registrado");</script>';
+   echo "<script language='JavaScript'>";
+   echo "location = '../view/Registrar.html'";
+   echo "</script>";
+}
+    
+
+
 
 ?>
+
+
+
+
+
+
+
+

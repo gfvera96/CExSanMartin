@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   $('.carousel').carousel(
   {
@@ -6,11 +5,10 @@ $(document).ready(function(){
     padding: 0,
     fullWidth: true,
     indicators: true,
-    duration: 50,
+    duration: 100,
   }
   );
 });
-
 autoplay()
 function autoplay() {
     $('.carousel').carousel('next');

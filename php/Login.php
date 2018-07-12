@@ -17,15 +17,15 @@ $sql="SELECT * FROM `usuario` WHERE `correo`='$correo' and `password`='$pass'"; 
     $ns=$row['perfil']; // descargo el niver de usuario
     if($ns=="cliente")
     {
-        header('location: ../cliente.html');
+        header('location: ../view/cliente.html');
     }
     elseif($ns=="administrador")
     {
-        header('location: ../administrador.html');
+        header('location: ../view/administrador.html');
     }
     elseif($ns=="admin")
     {
-        header('location: ../admin.html');
+        header('location: ../view/admin.html');
     }
 
      
@@ -35,7 +35,7 @@ else
     {
             echo '<script language="javascript">alert("Datos incorrectos");</script>';
             echo "<script language='JavaScript'>";
-            echo "location = '../Login.html'";
+            echo "location = '../view/Login.html'";
             echo "</script>";  
 
     }
